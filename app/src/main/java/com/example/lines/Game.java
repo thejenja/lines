@@ -33,5 +33,4 @@ public class Game extends AppCompatActivity {
             tableLayout.addView(tableRow, i);
         }
     }
-    }
 }
