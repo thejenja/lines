@@ -19,8 +19,8 @@ public class Game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        int BOOKSHELF_ROWS = 5;
-        int BOOKSHELF_COLUMNS = 5;
+        int BOOKSHELF_ROWS = 7;
+        int BOOKSHELF_COLUMNS = 4;
 
         TableLayout tableLayout = (TableLayout) findViewById(R.id.tableLayout);
 

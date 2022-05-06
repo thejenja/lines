@@ -8,6 +8,7 @@
 
     <EditText
         android:id="@+id/InGameName"
+        style="@android:style/Widget.Material.EditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -22,6 +23,7 @@
 
     <Button
         android:id="@+id/PlayGame"
+        style="@android:style/Widget.Material.Light.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="playGame"
