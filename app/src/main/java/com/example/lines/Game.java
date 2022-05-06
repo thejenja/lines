@@ -30,6 +30,13 @@ public class Game extends AppCompatActivity {
             tableRow.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,
                     TableLayout.LayoutParams.WRAP_CONTENT));
 
+            for (int j = 0; j < BOOKSHELF_COLUMNS; j++) {
+                ImageView imageView = new ImageView(this);
+                imageView.setImageResource(R.drawable.ball);
+
+                tableRow.addView(imageView, j);
+            }
+
             tableLayout.addView(tableRow, i);
         }
     }
