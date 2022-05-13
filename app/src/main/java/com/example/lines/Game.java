@@ -9,23 +9,56 @@ import android.graphics.Path;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.FrameLayout;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Game extends AppCompatActivity {
+
+    private GridView gridView;
+    private GameAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+        final GridView g = (GridView) findViewById(R.id.gridView);
+        mAdapter = new GameAdapter(getApplicationContext(),
+                android.R.layout.simple_list_item_1);
+        g.setAdapter(mAdapter);
+        g.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+
+
+            }
+        });
+    }
+
+    /*@Override
+    public void onItemSelected(AdapterView<?> parent, View v, int position,
+                               long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }*/
+}
+/*
         int BOOKSHELF_ROWS = 7;
         int BOOKSHELF_COLUMNS = 4;
 
-        TableLayout tableLayout = (TableLayout) findViewById(R.id.tableLayout);
+        gridView = (GridView) findViewById(R.id.gridView);
 
         for (int i = 0; i < BOOKSHELF_ROWS; i++) {
 
@@ -40,7 +73,7 @@ public class Game extends AppCompatActivity {
                 tableRow.addView(imageView, j);
             }
 
-            tableLayout.addView(tableRow, i);
+            gridView.addView(tableRow, i);
         }
     }
     private int xDelta, yDelta;
@@ -62,8 +95,8 @@ public class Game extends AppCompatActivity {
                     break;
                 }
                 case MotionEvent.ACTION_MOVE: {
-                    if (x - xDelta + view.getWidth() <= container.getWidth()
-                            && y - yDelta + view.getHeight() <= container.getHeight()
+                    if (x - xDelta + view.getWidth() <= gridView.getWidth()
+                            && y - yDelta + view.getHeight() <= gridView.getHeight()
                             && x - xDelta >= 0
                             && y - yDelta >= 0) {
                         FrameLayout.LayoutParams layoutParams =
@@ -77,8 +110,8 @@ public class Game extends AppCompatActivity {
                     break;
                 }
             }
-            container.invalidate();
+            gridView.invalidate();
             return true;
         }
-    };
-}
+    };*/
+
