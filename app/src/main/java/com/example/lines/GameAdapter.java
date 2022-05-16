@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class GameAdapter extends ArrayAdapter<String> {
+public class GameAdapter<function> extends ArrayAdapter<String> {
 
     private static final String[] balls = { "0", "1", "0",
             "1", "0", "1", "0", "1", "0",
@@ -19,13 +19,11 @@ public class GameAdapter extends ArrayAdapter<String> {
     // Конструктор
     public GameAdapter(Context context, int textViewResourceId) {
         super(context, textViewResourceId, balls);
-        // TODO Auto-generated constructor stub
         this.mContext = context;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
 
         TextView label = (TextView) convertView;
 
@@ -37,9 +35,7 @@ public class GameAdapter extends ArrayAdapter<String> {
         return (convertView);
     }
 
-    // возвращает содержимое выделенного элемента списка
     public String getItem(int position) {
         return balls[position];
     }
-
 }

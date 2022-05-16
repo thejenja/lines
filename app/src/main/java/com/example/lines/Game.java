@@ -2,6 +2,7 @@ package com.example.lines;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ClipData;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -37,8 +39,14 @@ public class Game extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
+                String beforeBall = mAdapter.getItem(position);
 
+                if (position == 0) {
+                    String changedBall = beforeBall.toString().concat("1");
 
+                    mAdapter.remove(beforeBall);
+                    mAdapter.insert(new ClipData.Item(changedBall), position);
+                }
             }
         });
     }
