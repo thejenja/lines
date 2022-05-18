@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Lines</string>
+    <string name="play_btn">Play</string>
+    <string name="name_hover">Name</string>
 </resources>

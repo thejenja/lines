@@ -8,11 +8,7 @@ import android.widget.TextView;
 
 public class GameAdapter<function> extends ArrayAdapter<String> {
 
-    private static final String[] balls = { "0", "1", "0",
-            "1", "0", "1", "0", "1", "0",
-            "1", "0", "1", "0", "1", "0",
-            "1", "0", "1", "0", "1", "0",
-            "1", "0", "1", "0", "1" };
+    private static final String[] balls = { "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"};
 
     Context mContext;
 
